@@ -48,7 +48,16 @@ main section
 /*css for Main*/
 
 /*footer*/
-
+#footer
+{
+    background: #fff;
+}
+#footer #box-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+}
 /*footer*/
 
 #heading
