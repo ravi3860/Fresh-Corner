@@ -54,6 +54,7 @@ main section
 }
 #footer #box-container
 {
+    border: 0px solid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     gap: 1.5rem;
