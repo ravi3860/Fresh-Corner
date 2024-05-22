@@ -48,11 +48,11 @@ main section
 /*css for Main*/
 
 /*footer*/
-.footer
+#footer
 {
     background: #fff;
 }
-.footer .box-container
+#footer #box_container #box
 {
     border: 0px solid;
     display: grid;
