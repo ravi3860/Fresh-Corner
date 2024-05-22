@@ -55,9 +55,9 @@ main section
 #footer #box_container
 {
     border: 0px solid;
-    display: grid;
+     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-    gap: 1.5rem;
+    gap:1.5rem;
 }
 /*footer*/
 
