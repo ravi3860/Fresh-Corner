@@ -52,7 +52,7 @@ main section
 {
     background: #fff;
 }
-#footer #box_container #box
+#footer #box_container
 {
     border: 0px solid;
     display: grid;
