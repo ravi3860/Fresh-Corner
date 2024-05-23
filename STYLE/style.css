@@ -617,8 +617,22 @@ color: var(--gray);
     margin: 20px;
 }
 
+#box1.img
+{
+    width: 100%;
+    height: auto;
+}
 
+#card-content
+{
+    padding: 16rem;
+}
 
+#card-content p
+{
+    color: var(--gray);
+    font-size: 15px;
+}
 
 /*Products*/
 
