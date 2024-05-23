@@ -844,6 +844,19 @@ color: var(--gray);
      gap: 1.5px;
 }
 
+#footer #box_container #box h3
+{
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+#footer #box_container #box h3 i
+{
+    color: var(--yellow);
+    
+}
+
 
 /*footer*/
 
