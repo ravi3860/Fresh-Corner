@@ -878,7 +878,7 @@ color: var(--gray);
     padding: 1rem 0;
 }
 
-#footer #box_container #box #share
+#footer #box_container #box #share a
 {
     border: 0px solid;
     height: 4rem;
@@ -892,7 +892,7 @@ color: var(--gray);
     text-align: center;
 }
 
-#footer #box_container #box #share:hover
+#footer #box_container #box #share a:hover
 {
     background: var(--gray);
 }
