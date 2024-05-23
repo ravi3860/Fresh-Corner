@@ -941,7 +941,6 @@ color: var(--gray);
     #AboutUs1
     {
         font-size: 100%;
-        display: block;
     }
 
 }
@@ -1016,6 +1015,7 @@ color: var(--gray);
     #heading
     {
         font-size: 2.5rem;
+        text-align: center;
     }
 
     #wrapper {
@@ -1023,3 +1023,4 @@ color: var(--gray);
         grid-template-columns: auto;
     }
 }
+
