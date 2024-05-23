@@ -835,8 +835,6 @@ color: var(--gray);
 #footer
 {
     background: #fff;
-    box-shadow: var(--box-shadow);
-    border-radius: 2%;
 }
 #footer #box_container
 {
@@ -902,7 +900,19 @@ color: var(--gray);
 #footer #box_container #box #email
 {
     width: 100%;
+    margin: .7rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
 
+#footer #box_container #box #card-img
+{
+    margin-top: 2rem;
+    height: 3rem;
 }
 /*footer*/
 
