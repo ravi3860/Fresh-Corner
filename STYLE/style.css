@@ -851,11 +851,6 @@ color: var(--gray);
     padding: 1rem 0;
 }
 
-#footer #box_container #box h3 i
-{
-    color: var(--yellow);
-}
-
 #footer #box_container #box a
 {
     display: block;
