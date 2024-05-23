@@ -419,6 +419,13 @@ color: var(--gray);
     border: .2rem solid var(--white);
     color: var(--white);
 }
+
+#cr
+{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
 /*Home Page*/
 
 
