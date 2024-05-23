@@ -941,6 +941,7 @@ color: var(--gray);
     #AboutUs1
     {
         font-size: 100%;
+        display: block;
     }
 
 }
