@@ -940,7 +940,7 @@ color: var(--gray);
 
     #AboutUs1
     {
-        font-size: 66%;
+        font-size: 100%;
     }
 
 }
@@ -968,23 +968,6 @@ color: var(--gray);
     }
 
     #header #navbar a
-    {
-        font-size: 2rem; 
-        margin: 2rem 2.5rem;
-        display: block;
-    }
-
-    #footer #box_container #share #Links #card-img #email
-    {
-    position: absolute;
-    top: 110%;
-    right: -110%;
-    width: 30rem;
-    box-shadow: var(--box-shadow);
-    background: #fff;
-    }
-
-    #footer #box_container #share #Links #card-img #email
     {
         font-size: 2rem; 
         margin: 2rem 2.5rem;
