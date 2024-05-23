@@ -47,19 +47,6 @@ main section
 }
 /*css for Main*/
 
-/*footer*/
-#footer
-{
-    background: #fff;
-}
-#footer #box_container
-{
-    border: 0px solid;
-     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-     gap:1.5rem;
-}
-/*footer*/
 
 #heading
 {
@@ -843,6 +830,20 @@ color: var(--gray);
     color: #fff;
 }
 /*Loyalty Registration Page*/
+
+/*footer*/
+#footer
+{
+    background: #fff;
+}
+#footer #box_container
+{
+    border: 0px solid;
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26px, 1fr));
+     gap: 2.5px;
+}
+/*footer*/
 
 
 
