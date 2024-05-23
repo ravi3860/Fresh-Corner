@@ -420,12 +420,6 @@ color: var(--gray);
     color: var(--white);
 }
 
-#cr
-{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-}
 /*Home Page*/
 
 
@@ -595,6 +589,13 @@ color: var(--gray);
     font-size: 1.7rem;
     color: var(--yellow);
     padding: .5rem 0;
+}
+
+#products #product-slider #box #cr img
+{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
 }
 
 #stars
