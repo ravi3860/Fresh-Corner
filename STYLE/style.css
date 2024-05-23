@@ -917,24 +917,6 @@ color: var(--gray);
     height: 3rem;
 }
 
-@media (max-width: 450px)
-{
-    html
-    {
-    font-size: 50%;
-    }
-
-    #heading
-    {
-        font-size: 2.5rem;
-    }
-
-    #wrapper {
-        display: grid;
-        grid-template-columns: auto;
-    }
-}
-
 /* Media Queries for footer */
 @media (max-width: 992px) {
     #footer #box_container {
@@ -1068,5 +1050,33 @@ color: var(--gray);
 
     #main-user-info::-webkit-scrollbar{
         width: 0;
+    }
+}
+
+@media (max-width: 450px)
+{
+    html
+    {
+    font-size: 50%;
+    }
+
+    #heading
+    {
+        font-size: 2.5rem;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    
+    #header{
+        position: relative;
+    }
+
+    #heading{
+    text-align: center;
+    padding: 3rem ;
+    font-size: 2.5rem; 
     }
 }
