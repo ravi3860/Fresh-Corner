@@ -940,7 +940,7 @@ color: var(--gray);
 
     #AboutUs1
     {
-        font-size: 100%;
+        font-size: 66%;
     }
 
 }
@@ -1022,5 +1022,9 @@ color: var(--gray);
         display: grid;
         grid-template-columns: auto;
     }
-}
 
+    #footer
+    {
+        display: inline-block;
+    }
+}
