@@ -864,6 +864,12 @@ color: var(--gray);
     padding: 1rem 0;
 }
 
+#footer #box_container #box a i
+{
+    color: var(--yellow);
+    padding-right: .5rem;
+}
+
 #footer #box_container #box p
 {
     line-height: 1.8;
