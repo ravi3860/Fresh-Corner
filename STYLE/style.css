@@ -1071,7 +1071,7 @@ color: var(--gray);
     }
     
     #header{
-        position: relative;
+        position: fixed;
     }
 
     #heading{
