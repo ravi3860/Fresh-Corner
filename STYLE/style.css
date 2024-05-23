@@ -841,8 +841,10 @@ color: var(--gray);
     border: 0px solid;
      display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-     gap: 2.5px;
+     gap: 1.5px;
 }
+
+
 /*footer*/
 
 
