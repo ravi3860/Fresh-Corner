@@ -835,6 +835,7 @@ color: var(--gray);
 #footer
 {
     background: #fff;
+    box-shadow: var(--box-shadow);
 }
 #footer #box_container
 {
