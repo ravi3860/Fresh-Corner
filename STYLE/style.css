@@ -1023,7 +1023,7 @@ color: var(--gray);
     }
 }
 
-/* Media Queries */
+/* Media Queries for footer */
 @media (max-width: 992px) {
     #footer #box_container {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
