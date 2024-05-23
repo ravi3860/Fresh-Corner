@@ -1003,6 +1003,16 @@ color: var(--gray);
     #main-user-info::-webkit-scrollbar{
         width: 0;
     }
+
+    #footer #box_container {
+        padding:  0 10px;
+    }
+
+    #footer #box_container #box {
+        padding: 10px;
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 450px)
@@ -1021,10 +1031,5 @@ color: var(--gray);
     #wrapper {
         display: grid;
         grid-template-columns: auto;
-    }
-
-    #footer
-    {
-        display: inline-block;
     }
 }
