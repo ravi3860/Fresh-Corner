@@ -836,7 +836,7 @@ color: var(--gray);
 #footer
 {
     background: #fff;
-    padding: 5%;
+    padding: 3%;
 }
 #footer #box_container
 {
@@ -915,6 +915,71 @@ color: var(--gray);
 {
     margin-top: 2rem;
     height: 3rem;
+}
+
+@media (max-width: 450px)
+{
+    html
+    {
+    font-size: 50%;
+    }
+
+    #heading
+    {
+        font-size: 2.5rem;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+/* Media Queries for footer */
+@media (max-width: 992px) {
+    #footer #box_container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #footer #box_container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #footer #box {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer #box_container {
+        padding: 0 10px;
+    }
+
+    #footer #box h3 {
+        font-size: 2rem;
+    }
+
+    #footer #box p, #footer #Links {
+        font-size: 1.2rem;
+    }
+
+    #footer #share a {
+        height: 3rem;
+        width: 3rem;
+        line-height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    #footer #email {
+        font-size: 1.4rem;
+    }
+
+    #footer #card-img {
+        height: 2.5rem;
+    }
 }
 /*footer*/
 
@@ -1003,70 +1068,5 @@ color: var(--gray);
 
     #main-user-info::-webkit-scrollbar{
         width: 0;
-    }
-}
-
-@media (max-width: 450px)
-{
-    html
-    {
-    font-size: 50%;
-    }
-
-    #heading
-    {
-        font-size: 2.5rem;
-    }
-
-    #wrapper {
-        display: grid;
-        grid-template-columns: auto;
-    }
-}
-
-/* Media Queries for footer */
-@media (max-width: 992px) {
-    #footer #box_container {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
-    #footer #box_container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    #footer #box {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    #footer #box_container {
-        padding: 0 10px;
-    }
-
-    #footer #box h3 {
-        font-size: 2rem;
-    }
-
-    #footer #box p, #footer #Links {
-        font-size: 1.2rem;
-    }
-
-    #footer #share a {
-        height: 3rem;
-        width: 3rem;
-        line-height: 3rem;
-        font-size: 1.5rem;
-    }
-
-    #footer #email {
-        font-size: 1.4rem;
-    }
-
-    #footer #card-img {
-        height: 2.5rem;
     }
 }
