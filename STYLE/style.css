@@ -1079,4 +1079,9 @@ color: var(--gray);
     padding: 3rem ;
     font-size: 2.5rem; 
     }
+
+    main section
+   {
+    padding: 0;
+   }
 }
