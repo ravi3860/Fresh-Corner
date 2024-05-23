@@ -55,7 +55,7 @@ main section
     padding-bottom: 3rem;
     font-size: 3.5rem;
     color: var(--black);
-    margin-top: 25px;
+    margin-top: 28px;
 }
 
 #heading span
@@ -837,7 +837,6 @@ color: var(--gray);
 {
     background: #fff;
     padding: 3%;
-    position: absolute;
     
 }
 #footer #box_container
