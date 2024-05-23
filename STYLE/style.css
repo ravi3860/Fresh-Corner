@@ -591,13 +591,6 @@ color: var(--gray);
     padding: .5rem 0;
 }
 
-#products #product-slider #box #cr img
-{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-}
-
 #stars
 {
     font-size: 1.7rem;
