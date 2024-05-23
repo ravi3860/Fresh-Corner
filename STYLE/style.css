@@ -836,6 +836,7 @@ color: var(--gray);
 {
     background: #fff;
     box-shadow: var(--box-shadow);
+    border-radius: 2%;
 }
 #footer #box_container
 {
@@ -898,6 +899,11 @@ color: var(--gray);
     background: var(--gray);
 }
 
+#footer #box_container #box #email
+{
+    width: 100%;
+
+}
 /*footer*/
 
 
