@@ -865,6 +865,11 @@ color: var(--gray);
     padding-right: .5rem;
 }
 
+#footer #box_container #box a:hover i
+{
+    padding-right: 2rem;
+}
+
 #footer #box_container #box p
 {
     line-height: 1.8;
@@ -873,6 +878,17 @@ color: var(--gray);
     padding: 1rem 0;
 }
 
+#footer #box_container #box #share a i
+{
+    border: 1px solid;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: .2rem;
+}
 
 /*footer*/
 
