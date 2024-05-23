@@ -1076,8 +1076,9 @@ color: var(--gray);
 
     #heading{
     text-align: center;
-    padding: 16rem ;
+    padding: 2rem ;
     font-size: 2.5rem; 
+    margin: auto;
     }
 
     main section
