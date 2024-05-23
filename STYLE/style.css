@@ -851,7 +851,7 @@ color: var(--gray);
     padding: 1rem 0;
 }
 
-#footer #box_container #box #links
+#footer #box_container #box #Links
 {
     display: block;
     font-size: 1.5rem;
@@ -859,13 +859,13 @@ color: var(--gray);
     padding: 1rem 0;
 }
 
-#footer #box_container #box #links i
+#footer #box_container #box #Links i
 {
     color: var(--yellow);
     padding-right: .5rem;
 }
 
-#footer #box_container #box #links:hover i
+#footer #box_container #box #Links:hover i
 {
     padding-right: 2rem;
 }
