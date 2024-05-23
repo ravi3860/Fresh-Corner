@@ -603,7 +603,7 @@ color: var(--gray);
     margin-right: auto;
 }
 
-#box1 
+#products #box1 
 {
     width: 200px;
     height: 100px;
@@ -611,6 +611,12 @@ color: var(--gray);
     padding: 10px;
     margin: 10px;
     border-radius: 8px;
+}
+
+#products #box1 p
+{
+    font-size: 2rem;
+    line-height: 1.8;
 }
 
 /*Products*/
