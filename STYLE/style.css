@@ -836,6 +836,7 @@ color: var(--gray);
 #footer
 {
     background: #fff;
+    padding: 5%;
 }
 #footer #box_container
 {
