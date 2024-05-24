@@ -839,6 +839,17 @@ color: var(--gray);
     background: var(--yellow1);
     color: #fff;
 }
+
+#list
+{
+    text-align: center;
+    display: inline-block;
+    text-align: left;
+    color: var(--white);
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
 /*Loyalty Registration Page*/
 
 /*footer*/
