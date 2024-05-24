@@ -395,6 +395,12 @@ color: var(--gray);
     width: 50rem;
 }
 
+#Home #content #list
+{
+    display: inline-block;
+    text-align: left;
+}
+
 #Home #content h3
 {
     color: var(--white);
