@@ -66,46 +66,6 @@ main section
     padding: .5rem 3rem;
     clip-path: ellipse();
 }
-/*Table*/
-table
-{
-    border-spacing: 40px;
-}
-
-th
-{
-    text-align: center;
-    font-size: medium;
-}
-
-td
-{
-    text-align: left;
-    font-size: small;
-}
-
-table, th, td
-{
-    border: 1px solid var(--black);
-    border-collapse: collapse;
-}
-
-th, td
-{
-    padding: 10px ;
-}
-
-tr:nth-child(even) 
-{
-    background-color: #fff;
-}
-
-tr:nth-child(even) 
-{
-    background-color: #ddd;
-}
-/*Table*/
-
 
 /*Button Function*/
 #btn
