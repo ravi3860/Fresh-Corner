@@ -404,11 +404,12 @@ color: var(--gray);
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    align-items: center;
 }
 
 #order-page button:hover {
-    background-color: green;
+    background-color: rgb(111, 223, 46);
 }
 
 #order-page button:focus {
