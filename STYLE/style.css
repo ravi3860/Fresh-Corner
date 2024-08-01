@@ -367,6 +367,62 @@ color: var(--gray);
 }
 /*css for Cart*/
 
+/*css for Order Table*/
+#order-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#order-table th, #order-table td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+#order-table td img {
+    width: 50px;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+}
+
+#order-table td {
+    border-bottom: 1px solid #ddd;
+}
+
+#order-table .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Button Styles */
+#order-page button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+#order-page button:hover {
+    background-color: #0056b3;
+}
+
+#order-page button:focus {
+    outline: none;
+}
+
+/* Last row buttons */
+#order-page .actions-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+/*css for Order table*/
+
 #header #login-form
 {
     border: 0px solid;

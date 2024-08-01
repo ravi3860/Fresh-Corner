@@ -61,6 +61,7 @@ function addToCart(button) {
     saveCart();
     updateCart();
     updateCartCount();
+    updateOrderTable();
 }
 
 //Functions for Remove from Cart 
@@ -70,6 +71,7 @@ function removeFromCart(index) {
     saveCart();
     updateCart();
     updateCartCount();
+    updateOrderTable();
 }
 
 //Functions to Decrease the quantity
@@ -83,6 +85,7 @@ function decreaseQuantity(index) {
     saveCart();
     updateCart();
     updateCartCount();
+    updateOrderTable();
 }
 
 //Functions to increase the quantity
@@ -92,6 +95,7 @@ function increaseQuantity(index) {
     saveCart();
     updateCart();
     updateCartCount();
+    updateOrderTable();
 }
 
 //Functions to Update the cart
@@ -131,6 +135,48 @@ function updateCart() {
     totalContainer.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
 }
 
+
+//Functions to Update the Order table
+function updateOrderTable() {
+    const orderContainer = document.getElementById('order-items');
+
+    if (cart.length === 0) {
+        orderContainer.innerHTML = '<tr><td colspan="5">No items in order</td></tr>';
+        return;
+    }
+
+    orderContainer.innerHTML = '';
+    cart.forEach((item, index) => {
+        orderContainer.innerHTML += `
+            <tr>
+                <td class="order-item-info">
+                    <img src="${item.image}" alt="${item.name} Image">
+                    <span>${item.name}</span>
+                </td>
+                <td class="price">$${item.price.toFixed(2)}</td>
+                <td class="quantity">${item.quantity}</td>
+                <td class="subtotal">$${(item.price * item.quantity).toFixed(2)}</td>
+                <td class="actions">
+                    <button onclick="decreaseQuantity(${index})">-</button>
+                    <button onclick="increaseQuantity(${index})">+</button>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                </td>
+            </tr>
+        `;
+    });
+
+    // Add buttons to the end of the table
+    orderContainer.innerHTML += `
+        <tr>
+            <td colspan="5">
+                <button onclick="applyFavorites()">Apply Favorites</button>
+                <button onclick="addToFavorites()">Add to Favorites</button>
+            </td>
+        </tr>
+    `;
+}
+
+
 //Functions to update the cart count
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
@@ -154,3 +200,4 @@ window.onclick = function(event) {
 
 updateCart();
 updateCartCount();
+updateOrderTable();
