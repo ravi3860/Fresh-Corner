@@ -398,13 +398,13 @@ color: var(--gray);
 
 /* Button Styles */
 #order-page button {
-    background-color: #007bff;
+    background-color: green;
     color: #fff;
     border: none;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 0.875rem;
+    font-size: 3rem;
 }
 
 #order-page button:hover {
