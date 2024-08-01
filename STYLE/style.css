@@ -392,8 +392,7 @@ color: var(--gray);
 }
 
 #order-table .actions {
-    display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 /* Button Styles */
