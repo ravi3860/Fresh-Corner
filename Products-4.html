@@ -86,86 +86,96 @@
     </header>
     <!--Header section-->
 
-        
     <!--Main Section-->
-    <section id="products">
-        <h1 id="heading"> <span>Cosmetic</span> Section</h1>
+      <section id="products">
+        <h1 id="heading"> <span>Fruits</span> Section</h1>
 
-        <table id="table1">
-            <tr>
-                <th>Product</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Ratings</th>
-                <th>Checkout</th>
-            </tr>
-            <tr data-name="GLOWY LIP BALM PEACH" data-price="19.99">
-                <th><img src="./IMG/CP.png" alt=""></th>
-                <th>GLOWY LIP BALM PEACH</th>
-                <th>$19.99/-</th>
-                <th id="stars"><i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i></th>
-                <th><button id="btn" onclick="addToCart(this)">Add to Cart</button></th>
-            </tr>
-            <tr data-name="GLOWY LIP BALM BERRY" data-price="39.99">
-                <th><img src="./IMG/CP(2).png" alt=""></th>
-                <th>GLOWY LIP BALM BERRY</th>
-                <th>$39.99/-</th>
-                <th id="stars"><i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half" aria-hidden="true"></i></th>
-                <th><button id="btn" onclick="addToCart(this)">Add to Cart</button></th>
-            </tr>
-            <tr data-name="MIRACLE HAIR TREATMENT" data-price="19.99">
-                <th><img src="./IMG/CP(3).png" alt=""></th>
-                <th>MIRACLE HAIR TREATMENT</th>
-                <th>$99.99/-</th>
-                <th id="stars"><i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </th>
-                <th><button id="btn" onclick="addToCart(this)">Add to Cart</button></th>
-            </tr>
-            <tr data-name="MATTE COLOUR LIPSTICK" data-price="49.99">
-                <th><img src="./IMG/CP(4).png" alt=""></th>
-                <th>MATTE COLOUR LIPSTICK</th>
-                <th>$49.99/-</th>
-                <th id="stars"><i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </th>
-                <th><button id="btn" onclick="addToCart(this)">Add to Cart</button></th>
-            </tr>
-            <tr data-name="ANTI FRIZZ HAIR GLOSS SERUM" data-price="79.99">
-                <th><img src="./IMG/CP(5).png" alt=""></th>
-                <th>ANTI FRIZZ HAIR GLOSS SERUM</th>
-                <th>$79.99/-</th>
-                <th id="stars"><i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i></th>
-                <th><button id="btn" onclick="addToCart(this)">Add to Cart</button></th>
-            </tr>
-            <tr data-name="COMPACT POWDER" data-price="89.99">
-                <th><img src="./IMG/CP(6).png" alt=""></th>
-                <th>COMPACT POWDER</th>
-                <th>$89.99/-</th>
-                <th id="stars"><i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </th>
-                <th><button id="btn" onclick="addToCart(this)">Add to Cart</button></th>
-            </tr>
-        </table>
-        <!--Main Section-->
+        <section id="product-slider">
+            <section id="wrapper">
+                <section id="box" data-name="Chicken Legs" data-price="12.99">
+                    <img src="./IMG/Meat 1.jpg" alt="">
+                    <h1>Chicken Legs</h1>
+                    <section id="price">$12.99/-</section>
+                    <section id="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </section>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
+                </section>
+
+                <section id="box" data-name="Broiler Chicken" data-price="15.99">
+                    <img src="./IMG/Meat 2.jpg" alt="">
+                    <h1>Broiler Chicken</h1>
+                    <section id="price">$15.99/-</section>
+                    <section id="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half" aria-hidden="true"></i>
+                    </section>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
+                </section>
+
+                <section id="box" data-name="Fresh Beef" data-price="29.99">
+                    <img src="./IMG/Meat 3.jpg" alt="">
+                    <h1>Fresh Beef</h1>
+                    <section id="price">$29.99/-</section>
+                    <section id="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </section>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
+                </section>
+
+                <section id="box" data-name="Calamari rings" data-price="11.99">
+                        <img src="./IMG/Meat 4.jpg" alt="">
+                        <h1>Calamari rings</h1>
+                        <section id="price">$11.99/-</section>
+                        <section id="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                    </section>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
+                </section>
+
+                <section id="box" data-name="Crab Meat" data-price="19.99">
+                    <img src="./IMG/Meat 5.jpg" alt="">
+                    <h1>Crab Meat</h1>
+                    <section id="price">$19.99/-</section>
+                    <section id="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half" aria-hidden="true"></i>
+                    </section>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
+                </section>
+
+                <section id="box" data-name="Tuna Cubes" data-price="39.99">
+                    <img src="./IMG/Meat 6.jpg" alt="">
+                    <h1>Tuna Cubes</h1>
+                    <section id="price">$39.99/-</section>
+                    <section id="stars">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half" aria-hidden="true"></i>
+                    </section>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!--Main Section-->
 
         <!--footer section-->
         <section id="footer">
