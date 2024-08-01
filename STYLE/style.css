@@ -404,7 +404,7 @@ color: var(--gray);
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 1rem;
 }
 
 #order-page button:hover {
