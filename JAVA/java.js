@@ -120,6 +120,7 @@ function updateCart() {
                 <td class="quantity">${item.quantity}</td>
                 <td class="subtotal">$${(item.price * item.quantity).toFixed(2)}</td>
                 <td class="actions">
+                    <button onclick="increaseQuantity(${index})">+</button>
                     <button onclick="decreaseQuantity(${index})">-</button>
                     <button onclick="removeFromCart(${index})">Remove</button>
                 </td>
