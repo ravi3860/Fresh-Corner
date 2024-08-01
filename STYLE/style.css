@@ -249,7 +249,8 @@ color: var(--gray);
     list-style: 2.5rem;
     position: absolute;
     margin-top: 0.2rem;
-    right: 20rem;
+    right: 18rem;
+    top: 10rem;
 }
 
 #cart-modal {
