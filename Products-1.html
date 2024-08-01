@@ -45,6 +45,8 @@
         <i class="fa fa-bars" aria-hidden="true" id="menubar"></i>
         <i class="fa fa-search" aria-hidden="true" id="search"></i>
         <i class="fa fa-user-circle-o" aria-hidden="true" id="loginbtn"></i>
+        <i class="fa fa-shopping-cart" aria-hidden="true" id="shoppingcart" onclick="toggleCart()"></i>
+        <span id="cart-count">0</span>
     </section>
 
     <form id="search-form">
@@ -53,11 +55,6 @@
     </form>
 
     <section id="shopping-cart">
-        <section id="icons">
-            <i class="fa fa-shopping-cart" aria-hidden="true" id="shoppingcart" onclick="toggleCart()"></i>
-            <span id="cart-count">0</span>
-        </section>
-    
         <section id="cart-modal">
           <section id="cart-modal-content">
             <span class="close" onclick="toggleCart()">&times;</span>

@@ -45,6 +45,8 @@
         <i class="fa fa-bars" aria-hidden="true" id="menubar"></i>
         <i class="fa fa-search" aria-hidden="true" id="search"></i>
         <i class="fa fa-user-circle-o" aria-hidden="true" id="loginbtn"></i>
+        <i class="fa fa-shopping-cart" aria-hidden="true" id="shoppingcart" onclick="toggleCart()"></i>
+        <span id="cart-count">0</span>
     </section>
 
     <form id="search-form">
@@ -53,35 +55,20 @@
     </form>
 
     <section id="shopping-cart">
-        <section id="box">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-            <img src="./IMG/veg/Onion.jpeg" alt="">
-            <section id="content">
-             <h3>Onion</h3>
-             <span id="price">$9.99/-</span>
-             <span id="quantity">Qty: 5</span>
+        <section id="cart-modal">
+          <section id="cart-modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2 id="cart-topic">Your Cart</h2>
+            <table id="cart-table">
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+            <section id="cart-total"><p>Total: $0.00</p></section>
+            <section>
+                <button id="btn">Proceed to Checkout</button>
             </section>
+          </section>
         </section>
-        <section id="box">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-            <img src="./IMG/veg/Carrot.jpg" alt="">
-            <section id="content">
-             <h3>Carrot</h3>
-             <span id="price">$14.99/-</span>
-             <span id="quantity">Qty: 5</span>
-            </section>
-        </section>
-        <section id="box">
-            <i class="fa fa-trash" aria-hidden="true"></i>
-            <img src="./IMG/veg/Potato.jpg" alt="">
-            <section id="content">
-             <h3>Potato</h3>
-             <span id="price">$4.99/-</span>
-             <span id="quantity">Qty: 5</span>
-            </section>
-        </section>
-    <section id="total">total : $39.97</section>
-    <a href="./Order Page.html" id="btn">Checkout</a>
     </section>
 
     <form action="#" id="login-form">
