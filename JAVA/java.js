@@ -37,7 +37,12 @@ window.onscroll = () =>
 
 //Functions for Cart 
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
+
+function saveCart() {
+    localStorage.setItem('shopping-cart', JSON.stringify(cart));
+}
+
 //Functions for Add to Cart 
 function addToCart(button) {
     const product = button.parentElement;
@@ -52,7 +57,8 @@ function addToCart(button) {
     } else {
         cart.push({ name, price, image, quantity: 1 });
     }
-
+    
+    saveCart();
     updateCart();
     updateCartCount();
 }
@@ -60,6 +66,8 @@ function addToCart(button) {
 //Functions for Remove from Cart 
 function removeFromCart(index) {
     cart.splice(index, 1);
+
+    saveCart();
     updateCart();
     updateCartCount();
 }
@@ -72,6 +80,16 @@ function decreaseQuantity(index) {
     } else {
         cart.splice(index, 1);
     }
+    saveCart();
+    updateCart();
+    updateCartCount();
+}
+
+//Functions to increase the quantity
+function increaseQuantity(index) {
+    const cartItem = cart[index];
+    cartItem.quantity += 1;
+    saveCart();
     updateCart();
     updateCartCount();
 }
@@ -132,3 +150,6 @@ window.onclick = function(event) {
         cartModal.style.display = 'none';
     }
 }
+
+updateCart();
+updateCartCount();
