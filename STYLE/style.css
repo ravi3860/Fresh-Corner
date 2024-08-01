@@ -246,7 +246,7 @@ color: var(--gray);
     border-radius: 50%;
     font-size: 1.4rem;
     list-style: 2.5rem;
-    position: relative;
+    position: absolute;
     margin-top: 0.2rem;
     right: 18rem;
     top: 5.5rem;
