@@ -236,7 +236,6 @@ color: var(--gray);
 /*css for Cart*/
 #cart-count
 {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
