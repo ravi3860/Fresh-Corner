@@ -408,18 +408,11 @@ color: var(--gray);
 }
 
 #order-page button:hover {
-    background-color: #0056b3;
+    background-color: green;
 }
 
 #order-page button:focus {
     outline: none;
-}
-
-/* Last row buttons */
-#order-page .actions-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
 }
 /*css for Order table*/
 
