@@ -571,6 +571,7 @@ color: var(--gray);
     line-height: 1.8;
     color: var(--light-color); 
     padding-bottom: 1rem 0;
+    height: 30%;
 }
 
 #AboutUs1 #boxcontainer #box
