@@ -38,9 +38,15 @@ window.onscroll = () =>
 //Functions for Cart 
 
 let cart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
 
 function saveCart() {
     localStorage.setItem('shopping-cart', JSON.stringify(cart));
+}
+
+function saveFavorites() {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
 //Functions for Add to Cart 
@@ -164,16 +170,6 @@ function updateOrderTable() {
             </tr>
         `;
     });
-
-    // Add buttons to the end of the table
-    orderContainer.innerHTML += `
-        <tr>
-            <td colspan="5">
-                <button onclick="applyFavorites()">Apply Favorites</button>
-                <button onclick="addToFavorites()">Add to Favorites</button>
-            </td>
-        </tr>
-    `;
 }
 
 
@@ -201,3 +197,29 @@ window.onclick = function(event) {
 updateCart();
 updateCartCount();
 updateOrderTable();
+
+function showAlert(message) {
+    const alertBox = document.getElementById('alert-box');
+    const alertMsg = document.getElementById('msg');
+    alertMsg.innerText = message;
+    alertBox.classList.add('show');
+    
+    setTimeout(() => {
+        alertBox.classList.remove('show');
+    }, 2000);
+}
+
+function applyFavorites() {
+    cart = JSON.parse(localStorage.getItem('favorites')) || [];
+    saveCart();
+    updateCart();
+    updateCartCount();
+    updateOrderTable();
+    showAlert("Favorites are applied!");
+}
+
+function addToFavorites() {
+    favorites = [...cart];
+    saveFavorites();
+    showAlert("Favorites are added!");
+}

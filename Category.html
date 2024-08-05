@@ -143,9 +143,17 @@
         <!--Category section-->
 
         <section id="order-page">
+            <section id="alert-box">
+                <span class="fa fa-check-circle" aria-hidden="true" id="rht"></span>
+                <span id="msg"></span>
+            </section>
             <h2 id="heading">Order Summary</h2>
             <table id="order-table">
                 <tbody id="order-items"></tbody>
+                <td colspan="5">
+                    <button onclick="applyFavorites()">Apply Favorites</button>
+                    <button onclick="addToFavorites()">Add to Favorites</button>
+                </td>
             </table>
         </section>
         <br>
