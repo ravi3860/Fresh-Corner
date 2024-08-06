@@ -40,7 +40,7 @@ let cart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('shopping-cart', JSON.stringify(cart));
 }
 
 function saveFavorites() {
