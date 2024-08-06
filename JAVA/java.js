@@ -232,10 +232,24 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
     event.preventDefault(); // Prevent the form from submitting
 
     // Get all input fields
-    const inputs = document.querySelectorAll('#container form input[type="text"], #container form input[type="email"], #container form input[type="number"]');
+    const inputs = [
+        'full-name',
+        'email',
+        'address',
+        'city',
+        'state',
+        'zip-code',
+        'name-on-card',
+        'credit-card-number',
+        'exp-month',
+        'exp-year',
+        'cvv'
+    ];
+
     let allFieldsFilled = true;
 
-    inputs.forEach(input => {
+    inputs.forEach(id => {
+        const input = document.getElementById(id);
         if (input.value.trim() === '') {
             input.style.border = '1px solid red'; // Highlight the empty fields
             allFieldsFilled = false;
@@ -247,7 +261,7 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
     // If all fields are filled, submit the form
     if (allFieldsFilled) {
         alert('Form submitted successfully!');
-        document.querySelector('#container form').submit();
+        document.getElementById('billing-form').submit();
     } else {
         alert('Please fill in all the required fields.');
     }
