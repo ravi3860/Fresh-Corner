@@ -35,18 +35,20 @@ window.onscroll = () =>
     navbar.classList.remove('active');
 }
 
-//Functions for Cart 
+//Functions for Cart and Order table
 let cart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
+//Function to Save Cart
 function saveCart() {
     localStorage.setItem('shopping-cart', JSON.stringify(cart));
 }
-
+//Function to Save Favorites
 function saveFavorites() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
+//Function to Add to Cart
 function addToCart(button) {
     const product = button.parentElement;
     const name = product.getAttribute('data-name');
@@ -71,6 +73,7 @@ function addToCart(button) {
     updateOrderTable();
 }
 
+//Function to Remove from Cart
 function removeFromCart(index) {
     cart.splice(index, 1);
     saveCart();
@@ -79,6 +82,7 @@ function removeFromCart(index) {
     updateOrderTable();
 }
 
+//Function to decrease qantity
 function decreaseQuantity(index) {
     const cartItem = cart[index];
     if (cartItem.quantity > (cartItem.isWeightBased ? 0.1 : 1)) {
@@ -92,6 +96,7 @@ function decreaseQuantity(index) {
     updateOrderTable();
 }
 
+//Function to increase qantity
 function increaseQuantity(index) {
     const cartItem = cart[index];
     cartItem.quantity += cartItem.isWeightBased ? 0.1 : 1;
@@ -101,6 +106,7 @@ function increaseQuantity(index) {
     updateOrderTable();
 }
 
+//Function to Update Cart
 function updateCart() {
     const cartContainer = document.getElementById('cart-items');
     const totalContainer = document.getElementById('cart-total');
@@ -137,6 +143,7 @@ function updateCart() {
     totalContainer.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
 }
 
+//Function to Update Order table
 function updateOrderTable() {
     const orderContainer = document.getElementById('order-items');
 
@@ -166,17 +173,20 @@ function updateOrderTable() {
     });
 }
 
+//Function to Update Cart Count
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
     const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
     cartCount.innerText = itemCount; // Display the count as an integer
 }
 
+//Function to toggle Cart
 function toggleCart() {
     const cartModal = document.getElementById('cart-modal');
     cartModal.style.display = cartModal.style.display === 'block' ? 'none' : 'block';
 }
 
+//Function to Close the Cart
 window.onclick = function(event) {
     const cartModal = document.getElementById('cart-modal');
     if (event.target === cartModal) {
@@ -189,6 +199,7 @@ updateCart();
 updateCartCount();
 updateOrderTable();
 
+//Function to Show Alert when Favourites are added and applied
 function showAlert(message) {
     const alertBox = document.getElementById('alert-box');
     const alertMsg = document.getElementById('msg');
@@ -214,3 +225,30 @@ function addToFavorites() {
     saveFavorites();
     showAlert("Favorites are added!");
 }
+
+//Order Page 
+
+document.getElementById('submit-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get all input fields
+    const inputs = document.querySelectorAll('#container form input[type="text"], #container form input[type="email"], #container form input[type="number"]');
+    let allFieldsFilled = true;
+
+    inputs.forEach(input => {
+        if (input.value.trim() === '') {
+            input.style.border = '1px solid red'; // Highlight the empty fields
+            allFieldsFilled = false;
+        } else {
+            input.style.border = '1px solid #ccc'; // Reset the border if filled
+        }
+    });
+
+    // If all fields are filled, submit the form
+    if (allFieldsFilled) {
+        alert('Form submitted successfully!');
+        document.querySelector('#container form').submit();
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
