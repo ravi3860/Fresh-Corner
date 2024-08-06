@@ -91,10 +91,11 @@
 
         <section id="product-slider">
             <section id="wrapper">
-                <section id="box">
-                    <img src="./IMG/F1.jpg" alt="">
-                    <h1>Cavendish Banana</h1>
-                    <section id="price">$12.99/- $15.99/-</section>
+                <section id="box" data-name="Baking Powder" data-price="12.99" data-weight-based="false">
+                    <img src="./IMG/BC 1.jpg" alt="">
+                    <h1>Baking Powder</h1>
+                    <section id="price">$12.99/-</section>
+                    <input type="number" name="quantity" value="1" step="1" min="1">
                     <section id="stars">
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -102,13 +103,14 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </section>
-                    <a href="./Order Page.html" id="btn">Add To Cart</a>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
                 </section>
 
-                <section id="box">
-                    <img src="./IMG/F2.jpg" alt="">
-                    <h1>Jambola Fruit</h1>
-                    <section id="price">$15.99/- $19.99/-</section>
+                <section id="box" data-name="Bakig Powder(Marui)" data-price="19.99" data-weight-based="false">
+                    <img src="./IMG/BC 2.jpg" alt="">
+                    <h1>Bakig Powder(Marui)</h1>
+                    <section id="price">$19.99/-</section>
+                    <input type="number" name="quantity" value="1" step="1" min="1">
                     <section id="stars">
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -116,25 +118,27 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star-half" aria-hidden="true"></i>
                     </section>
-                    <a href="./Order Page.html" id="btn">Add To Cart</a>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
                 </section>
 
-                <section id="box">
-                    <img src="./IMG/F3.jpg" alt="">
-                    <h1>Melom-Dark Bell</h1>
-                    <section id="price">$4.99/- $9.99/-</section>
+                <section id="box" data-name="Bakig Powder(Motha)" data-price="4.99" data-weight-based="false">
+                    <img src="./IMG/BC 3.jpg" alt="">
+                    <h1>Bakig Powder(Motha)</h1>
+                    <section id="price">$4.99/-</section>
+                    <input type="number" name="quantity" value="1" step="1" min="1">
                     <section id="stars">
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </section>
-                    <a href="./Order Page.html" id="btn">Add To Cart</a>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
                 </section>
 
-                <section id="box">
-                        <img src="./IMG/F4.jpg" alt="">
-                        <h1>Grapes-Black</h1>
-                        <section id="price">$11.99/- $13.99/-</section>
+                <section id="box" data-name="Crescent Hummus" data-price="13.99" data-weight-based="false">
+                        <img src="./IMG/BC 4.jpg" alt="">
+                        <h1>Crescent Hummus</h1>
+                        <section id="price">$13.99/-</section>
+                        <input type="number" name="quantity" value="1" step="1" min="1">
                         <section id="stars">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -142,26 +146,28 @@
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                     </section>
-                    <a href="./Order Page.html" id="btn">Add To Cart</a>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
                 </section>
 
-                <section id="box">
-                    <img src="./IMG/F5.jpg" alt="">
-                    <h1>Melon-Red Fantasy</h1>
-                    <section id="price">$14.99/- $19.99/-</section>
+                <section id="box" data-name="Idli/Dosa Batter" data-price="14.99" data-weight-based="false">
+                    <img src="./IMG/BC 5.jpg" alt="">
+                    <h1>Idli/Dosa Batter</h1>
+                    <section id="price">$14.99/-</section>
+                    <input type="number" name="quantity" value="1" step="1" min="1">
                     <section id="stars">
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star-half" aria-hidden="true"></i>
                     </section>
-                    <a href="./Order Page.html" id="btn">Add To Cart</a>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
                 </section>
 
-                <section id="box">
-                    <img src="./IMG/F6.jpg" alt="">
-                    <h1>Papaya</h1>
-                    <section id="price">$10.99/- $19.99/-</section>
+                <section id="box" data-name="Milma" data-price="19.99" data-weight-based="false">
+                    <img src="./IMG/BC 6.jpg" alt="">
+                    <h1>Milma</h1>
+                    <section id="price">$19.99/-</section>
+                    <input type="number" name="quantity" value="1" step="1" min="1">
                     <section id="stars">
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -169,7 +175,7 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star-half" aria-hidden="true"></i>
                     </section>
-                    <a href="./Order Page.html" id="btn">Add To Cart</a>
+                    <button id="btn" onclick="addToCart(this)">Add to Cart</button>
                 </section>
             </section>
         </section>

@@ -36,55 +36,53 @@ window.onscroll = () =>
 }
 
 //Functions for Cart 
-
 let cart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-
 function saveCart() {
-    localStorage.setItem('shopping-cart', JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function saveFavorites() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
-//Functions for Add to Cart 
 function addToCart(button) {
     const product = button.parentElement;
     const name = product.getAttribute('data-name');
     const price = parseFloat(product.getAttribute('data-price'));
     const image = product.querySelector('img').src;
+    const isWeightBased = product.getAttribute('data-weight-based') === 'true';
+    const quantity = isWeightBased 
+        ? parseFloat(product.querySelector('input[name="quantity"]').value) 
+        : parseInt(product.querySelector('input[name="quantity"]').value);
 
     const cartItem = cart.find(item => item.name === name);
 
     if (cartItem) {
-        cartItem.quantity += 1;
+        cartItem.quantity += quantity;
     } else {
-        cart.push({ name, price, image, quantity: 1 });
+        cart.push({ name, price, image, quantity, isWeightBased });
     }
-    
+
     saveCart();
     updateCart();
     updateCartCount();
     updateOrderTable();
 }
 
-//Functions for Remove from Cart 
 function removeFromCart(index) {
     cart.splice(index, 1);
-
     saveCart();
     updateCart();
     updateCartCount();
     updateOrderTable();
 }
 
-//Functions to Decrease the quantity
 function decreaseQuantity(index) {
     const cartItem = cart[index];
-    if (cartItem.quantity > 1) {
-        cartItem.quantity -= 1;
+    if (cartItem.quantity > (cartItem.isWeightBased ? 0.1 : 1)) {
+        cartItem.quantity -= cartItem.isWeightBased ? 0.1 : 1;
     } else {
         cart.splice(index, 1);
     }
@@ -94,17 +92,15 @@ function decreaseQuantity(index) {
     updateOrderTable();
 }
 
-//Functions to increase the quantity
 function increaseQuantity(index) {
     const cartItem = cart[index];
-    cartItem.quantity += 1;
+    cartItem.quantity += cartItem.isWeightBased ? 0.1 : 1;
     saveCart();
     updateCart();
     updateCartCount();
     updateOrderTable();
 }
 
-//Functions to Update the cart
 function updateCart() {
     const cartContainer = document.getElementById('cart-items');
     const totalContainer = document.getElementById('cart-total');
@@ -126,12 +122,12 @@ function updateCart() {
                     <img src="${item.image}" alt="${item.name} Image">
                     <span>${item.name}</span>
                 </td>
-                <td class="price">$${item.price}</td>
-                <td class="quantity">${item.quantity}</td>
+                <td class="price">$${item.price.toFixed(2)}</td>
+                <td class="quantity">${item.quantity.toFixed(2)} ${item.isWeightBased ? 'kg' : ''}</td>
                 <td class="subtotal">$${(item.price * item.quantity).toFixed(2)}</td>
                 <td class="actions">
-                    <button onclick="increaseQuantity(${index})">+</button>
                     <button onclick="decreaseQuantity(${index})">-</button>
+                    <button onclick="increaseQuantity(${index})">+</button>
                     <button onclick="removeFromCart(${index})">Remove</button>
                 </td>
             </tr>
@@ -141,8 +137,6 @@ function updateCart() {
     totalContainer.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
 }
 
-
-//Functions to Update the Order table
 function updateOrderTable() {
     const orderContainer = document.getElementById('order-items');
 
@@ -160,7 +154,7 @@ function updateOrderTable() {
                     <span>${item.name}</span>
                 </td>
                 <td class="price">$${item.price.toFixed(2)}</td>
-                <td class="quantity">${item.quantity}</td>
+                <td class="quantity">${item.quantity.toFixed(2)} ${item.isWeightBased ? 'kg' : ''}</td>
                 <td class="subtotal">$${(item.price * item.quantity).toFixed(2)}</td>
                 <td class="actions">
                     <button onclick="decreaseQuantity(${index})">-</button>
@@ -172,21 +166,17 @@ function updateOrderTable() {
     });
 }
 
-
-//Functions to update the cart count
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
     const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
-    cartCount.innerText = itemCount;
+    cartCount.innerText = itemCount; // Display the count as an integer
 }
-
 
 function toggleCart() {
     const cartModal = document.getElementById('cart-modal');
     cartModal.style.display = cartModal.style.display === 'block' ? 'none' : 'block';
 }
 
-//Functions to Close the Cart
 window.onclick = function(event) {
     const cartModal = document.getElementById('cart-modal');
     if (event.target === cartModal) {
@@ -194,6 +184,7 @@ window.onclick = function(event) {
     }
 }
 
+// Initialize cart on page load
 updateCart();
 updateCartCount();
 updateOrderTable();
@@ -206,7 +197,7 @@ function showAlert(message) {
     
     setTimeout(() => {
         alertBox.classList.remove('show');
-    }, 2000);
+    }, 2000); // Hide after 2 seconds
 }
 
 function applyFavorites() {
