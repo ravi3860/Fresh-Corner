@@ -86,7 +86,7 @@
     <!--Main section-->
 <h1 id="heading"><span>Billing</span> And Payments</h1>
 <section id="container">
-    <form action="">
+    <form action="" onsubmit="submitForm(event)">
         <section id="row">
             <section id="col">
                 <h3 id="title">billing address</h3>
@@ -154,7 +154,7 @@
                 </section>
             </section>
         </section>
-        <button type="submit" value="proceed to checkout" id="submit-btn" onclick="submitForm(event)">proceed to checkout</button>
+        <input type="submit" value="proceed to checkout" id="submit-btn">
     </form>
 </section>  
 <script src="./JAVA/java.js"></script>

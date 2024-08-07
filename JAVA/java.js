@@ -228,6 +228,15 @@ function addToFavorites() {
 
 
 function submitForm(event) {
+    event.preventDefault();  // Prevent form submission to handle validation manually
+
+    const form = event.target.closest('form');  // Get the form element
+
+    if (!form.checkValidity()) {
+        // If the form is invalid, let the browser handle showing validation errors
+        form.reportValidity();
+        return;
+    }
     localStorage.removeItem('shopping-cart');
     
     // calculate the dilivery date
