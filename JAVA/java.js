@@ -228,7 +228,6 @@ function addToFavorites() {
 
 
 function submitForm(event) {
-    event.preventDefault('container');
     localStorage.removeItem('shopping-cart');
     
     // calculate the dilivery date
@@ -246,14 +245,3 @@ function submitForm(event) {
     //refresh the page
     window.location.reload();
 }
-
-let popup = document.getElementById("popup")
-
-function openPopup(){
-    popup.classList.add("open-popup")
-}
-
-function closePopup(){
-    popup.classList.remove("open-popup")
-}
-
