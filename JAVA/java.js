@@ -201,8 +201,8 @@ updateOrderTable();
 
 //Function to Show Alert when Favourites are added and applied
 function showAlert(message) {
-    const alertBox = document.getElementById('alert-box');
-    const alertMsg = document.getElementById('msg');
+    const alertBox = document.getElementById('alert-box-1');
+    const alertMsg = document.getElementById('masg');
     alertMsg.innerText = message;
     alertBox.classList.add('show');
     
@@ -224,17 +224,6 @@ function addToFavorites() {
     favorites = [...cart];
     saveFavorites();
     showAlert("Favorites are added!");
-}
-
-function showAlert(message) {
-    const alertBox = document.getElementById('alert-box-1');
-    const alertMsg = document.getElementById('masg');
-    alertMsg.innerText = message;
-    alertBox.classList.add('show');
-    
-    setTimeout(() => {
-        alertBox.classList.remove('show');
-    }, 2000); // Hide after 2 seconds
 }
 
 function submitForm(event) {
