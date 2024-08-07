@@ -225,3 +225,35 @@ function addToFavorites() {
     saveFavorites();
     showAlert("Favorites are added!");
 }
+
+
+function submitForm(event) {
+    event.preventDefault('container');
+    localStorage.removeItem('shopping-cart');
+    
+    // calculate the dilivery date
+    let today = new Date();
+    let deliveryDate = new Date(today);
+    deliveryDate.setDate(today.getDate() + 2);
+
+    // format of dilivery date
+    let options = { year: 'numeric', month: 'long', day: 'numeric' };
+    let formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
+    
+    // display the alert
+    alert(`Thank You for Your Order! Your order has been successfully placed. Estimated delivery date: ${formattedDeliveryDate}.`);
+    
+    //refresh the page
+    window.location.reload();
+}
+
+let popup = document.getElementById("popup")
+
+function openPopup(){
+    popup.classList.add("open-popup")
+}
+
+function closePopup(){
+    popup.classList.remove("open-popup")
+}
+
