@@ -226,6 +226,16 @@ function addToFavorites() {
     showAlert("Favorites are added!");
 }
 
+function showAlert(message) {
+    const alertBox = document.getElementById('alert-box-1');
+    const alertMsg = document.getElementById('masg');
+    alertMsg.innerText = message;
+    alertBox.classList.add('show');
+    
+    setTimeout(() => {
+        alertBox.classList.remove('show');
+    }, 2000); // Hide after 2 seconds
+}
 
 function submitForm(event) {
     event.preventDefault();  // Prevent form submission to handle validation manually
@@ -249,8 +259,10 @@ function submitForm(event) {
     let formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
     
     // display the alert
-    alert(`Thank You for Your Order! Your order has been successfully placed. Estimated delivery date: ${formattedDeliveryDate}.`);
+    showAlert(`Thank You for Your Order! Your order has been successfully placed. Estimated delivery date: ${formattedDeliveryDate}.`);
     
-    //refresh the page
-    window.location.reload();
+     // Refresh the page after the alert is hidden
+    setTimeout(() => {
+        window.location.reload();
+    }, 2000);  // Adjust to match the alert display time
 }
