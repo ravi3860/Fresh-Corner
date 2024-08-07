@@ -87,6 +87,9 @@
 <section id="order-page">
     <h2 id="heading">Order Summary</h2>
     <table id="order-table">
+        <td colspan="5">
+            <p id="order-total">Total: $0.00</p>
+        </td>
         <tbody id="order-items"></tbody>
     </table>
 </section>
@@ -165,8 +168,12 @@
     </form>
 </section>  
 
-<section id="alert-box-1">
-    <span id="masg"></span>
+<section class="popup" id="popup">
+    <i class="fa fa-check-circle" aria-hidden="true" id="right"></i>
+    <h2>Thank You!</h2>
+    <p>Your order has been successfully placed. 
+       <br>Estimated delivery date: </p>
+    <button type="button" onclick="closePopup()">Ok</button>
 </section>
 
 <script src="./JAVA/java.js"></script>

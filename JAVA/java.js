@@ -146,14 +146,20 @@ function updateCart() {
 //Function to Update Order table
 function updateOrderTable() {
     const orderContainer = document.getElementById('order-items');
+    const orderTotal = document.getElementById('order-total');
+    let total = 0;
 
     if (cart.length === 0) {
         orderContainer.innerHTML = '<tr><td colspan="5">No items in order</td></tr>';
+        orderTotal.textContent = 'Total: $0.00';
         return;
     }
 
     orderContainer.innerHTML = '';
     cart.forEach((item, index) => {
+        const itemSubtotal = item.price * item.quantity;
+        total += itemSubtotal;
+
         orderContainer.innerHTML += `
             <tr>
                 <td class="order-item-info">
@@ -162,7 +168,7 @@ function updateOrderTable() {
                 </td>
                 <td class="price">$${item.price.toFixed(2)}</td>
                 <td class="quantity">${item.quantity.toFixed(2)} ${item.isWeightBased ? 'kg' : ''}</td>
-                <td class="subtotal">$${(item.price * item.quantity).toFixed(2)}</td>
+                <td class="subtotal">$${itemSubtotal.toFixed(2)}</td>
                 <td class="actions">
                     <button onclick="decreaseQuantity(${index})">-</button>
                     <button onclick="increaseQuantity(${index})">+</button>
@@ -171,7 +177,10 @@ function updateOrderTable() {
             </tr>
         `;
     });
+
+    orderTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
+
 
 //Function to Update Cart Count
 function updateCartCount() {
@@ -226,32 +235,38 @@ function addToFavorites() {
     showAlert("Favorites are added!");
 }
 
+let popup = document.getElementById("popup");
+
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+    window.location.reload(); // Refresh the page after the popup is closed
+}
+
 function submitForm(event) {
     event.preventDefault();  // Prevent form submission to handle validation manually
 
     const form = event.target.closest('form');  // Get the form element
 
     if (!form.checkValidity()) {
-        // If the form is invalid, let the browser handle showing validation errors
         form.reportValidity();
         return;
     }
+
     localStorage.removeItem('shopping-cart');
     
-    // calculate the dilivery date
     let today = new Date();
     let deliveryDate = new Date(today);
     deliveryDate.setDate(today.getDate() + 2);
 
-    // format of dilivery date
     let options = { year: 'numeric', month: 'long', day: 'numeric' };
     let formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
     
-    // display the alert
-    showAlert(`Thank You for Your Order! Your order has been successfully placed. Estimated delivery date: ${formattedDeliveryDate}.`);
-    
-     // Refresh the page after the alert is hidden
-    setTimeout(() => {
-        window.location.reload();
-    }, 2000);  // Adjust to match the alert display time
+    let popupMessage = document.querySelector("#popup p");
+    popupMessage.innerHTML += formattedDeliveryDate + ".";
+
+    openPopup();
 }
