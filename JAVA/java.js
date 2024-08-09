@@ -235,21 +235,24 @@ function addToFavorites() {
     showAlert("Favorites are added!");
 }
 
+//popup message and form submission prevention functions
 let popup = document.getElementById("popup");
 
 function openPopup() {
     popup.classList.add("open-popup");
 }
 
+// Refresh the page after the popup is closed
 function closePopup() {
     popup.classList.remove("open-popup");
-    window.location.reload(); // Refresh the page after the popup is closed
+    window.location.reload();
 }
 
+// Prevent form submission to handle validation manually
 function submitForm(event) {
-    event.preventDefault();  // Prevent form submission to handle validation manually
+    event.preventDefault(); 
 
-    const form = event.target.closest('form');  // Get the form element
+    const form = event.target.closest('form'); 
 
     if (!form.checkValidity()) {
         form.reportValidity();
@@ -257,7 +260,7 @@ function submitForm(event) {
     }
 
     localStorage.removeItem('shopping-cart');
-    
+    //function for delivery date 
     let today = new Date();
     let deliveryDate = new Date(today);
     deliveryDate.setDate(today.getDate() + 2);
